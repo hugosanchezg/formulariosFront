@@ -14,6 +14,7 @@ textarea {height:200px !important;}
 .titulo{
     font-family: monument;
     font-size: 2em;
+    text-shadow: 2px 2px #000000;
 }
 
 /*BACKGROUND IMAGE*/
@@ -45,6 +46,7 @@ textarea {height:200px !important;}
     display:flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 .piepagina .grupo1 .box figure img{
@@ -70,7 +72,7 @@ textarea {height:200px !important;}
 
 #imagenFooter {
     width: 100px;
-    margin: auto;
+    margin: auto; 
 }
 
 
