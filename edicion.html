@@ -18,7 +18,7 @@
 </head>
 <body class="bg-light">
 
-    <div id="wrapper" class="container p-5 bg-info">
+    <div id="wrapper" class="container-fluid quierofoto p-5">
         <a href="#"><img src="./images/letrasylogo.png" alt="logo" class="w-25 d-block m-auto"></a>
         <div class="row">
             <div class="col-xs-12 col-md-8 col-lg-6 m-auto bg-light">
@@ -26,28 +26,27 @@
                 <!-- formulario de bootstrap -->
                 <form method="post" action="..." class="p-4">
                     <h1 class="titulo text-center py-3 text-primary">Edición de datos</h1>
-                    <!-- introducción de nombre con efecto placeholder -->
+                    <!-- introducción nombre - placeholder -->
                     <div class="form-floating mb-3">
                         <input type="text" class="form-control" id="nombre" name="nombre" 
                         placeholder="Dame tu nombre" value="Hugo" required>
                         <label for="nombreHelp" class="form-label">Nombre *</label>
                     </div>
-                    <!-- introducción de apellidos con label y aclaración por debajo -->
+                    <!-- introducción apellidos - label -->
                     <div class="mb-3">
-                        <label for="apellidos" class="form-label">Apellidos *:</label>
+                        <label for="apellidos" class="form-label">Apellidos:*</label>
                         <input type="text" class="form-control" id="apellidos" name="apellidos" aria-describedby="apellidosHelp" value="Sánchez" required>
-                        <div id="apellidosHelp" class="form-text">Campo obligatorio</div>
                     </div>
-                    <!-- campo de tipo number con un mínimo y un máximo -->
+                    <!-- campo de tipo number - mínimo y máximo -->
                     <div class="mb-3">
                         <label for="codpostal" class="form-label">Código Postal *:</label>
                         <input type="number" min="29001" max="29999" class="form-control" id="codpostal" name="codpostal" aria-describedby="codpostalHelp" 
                         value="29006" required> 
                         <div id="codpostalHelp" class="form-text">Campo obligatorio</div>
                     </div>
-                    <!-- vamos a incluir un campo desplegable de opciones (select) -->
+                    
                     <div class="mb-3">
-                        <label for="provincia" class="form-label">Provincia *:</label>
+                        <label for="provincia" class="form-label">Provincia:*</label>
                         <!-- para validar que verdaderamente se elije una de las opciones y no se envía sin más, se tendría que evaluar mediante javascript (lo veremos más adelante)-->
                         <select class="form-select" aria-label="Selecciona provincia" id="provincia" name="provincia">
                             <option>--Selecciona provincia</option>
@@ -56,7 +55,7 @@
                             <option value="almeria">Almería</option>
                         </select>
                     </div>
-                    <!-- campo de texto. No se suele validar -->
+                    <!-- campo de texto no obligatorio -->
                     <div class="mb-3">
                         <label for="comentario">Dirección</label>
                         <textarea class="form-control" placeholder="Deja aquí la dirección" id="comentario" name="comentario"
@@ -64,20 +63,21 @@
                         
                     </div>
 
-                    <!-- campo booleano, casilla de verificación suele ir asociado con un dato verdadero/falso o con una aceptación de condiciones EN CUYO CASO, SE CONTROLARÍA LA OBLIGATORIEDAD DE MARCARLA DESDE JAVASCRIPT -->
-
+                    <!-- campo booleano para ver si el cliente es VIP o no -->
                     <div class="mb-3 form-check">
                         <input type="checkbox" class="form-check-input" id="mayoredad" name="mayoredad" checked>
                         <label class="form-check-label" for="mayoredad">VIP</label>
                     </div>
                     <button type="submit" class="btn btn-primary">Enviar</button>
                 </form>
-                <!-- fin de formulario de bootstrap -->
-            </div><!-- final del div col -->
-        </div><!-- final del div row-->
-    </div><!-- final del div container -->
+            </div>
+        </div>
+    </div>
+
+    <!--enlace a javascript-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
+    <!--FOOTER-->
     <footer class="piepagina">
         
         <div class="grupo1">
