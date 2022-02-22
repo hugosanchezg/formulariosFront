@@ -1,0 +1,92 @@
+/*
+
+    HUGOC'S STYLESHEET
+
+*/
+@font-face {
+    font-family:monument;
+    src: url("../fonts/MonumentExtended-Regular.otf");
+}
+
+textarea {height:200px !important;}
+
+.titulo{
+    font-family: monument;
+    font-size: 2em;
+}
+
+.quierofoto{
+    background-image: url(../images/foto1.PNG);
+}
+
+/*FOOTER*/
+.piepagina{
+    background-color: #fff;
+    width: 100%;
+    border:1px solid rgb(22, 133, 223);
+    border-radius: 1%;
+}
+
+.piepagina .grupo1{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap:50px;
+    padding: 45px 10px;
+}
+
+.piepagina .grupo1 .box img{
+    width: 100%;
+    height: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.piepagina .grupo1 .box figure img{
+    width: 250px;
+}
+
+.piepagina .grupo1 .box h2{
+    color: rgb(22, 133, 223);
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+
+.piepagina .grupo1 .box a{
+    color:#000000;
+    margin-bottom: 10px;
+}
+
+.piepagina .grupo1 .box p{
+    margin-bottom: 10px;
+    font-family: awesome;
+    font-size: 0.8em;
+}
+
+#imagenFooter {
+    width: 100px;
+    margin: auto;
+}
+
+
+/*MEDIA QUERIES*/
+@media screen and (max-width:800px){
+    
+    .piepagina .grupo1{
+        width: 100%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap:30px;
+        padding: 35px 0px;
+        text-align: center;
+    }
+    
+    .piepagina .grupo1 .box img{
+        width: 90%;
+        height: 90%;
+        display:block;
+            
+    }
+}
