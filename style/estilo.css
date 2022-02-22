@@ -10,13 +10,20 @@
 
 textarea {height:200px !important;}
 
+/*TÍTULOS*/
 .titulo{
     font-family: monument;
     font-size: 2em;
 }
 
+/*BACKGROUND IMAGE*/
+.quierofoto{
+    background-image: url(../images/foto1.PNG);
+}
+
 /*FOOTER*/
 .piepagina{
+    background-color: #fff;
     width: 100%;
     border:1px solid rgb(22, 133, 223);
     border-radius: 1%;
