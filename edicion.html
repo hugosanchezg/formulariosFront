@@ -19,7 +19,7 @@
 <body class="bg-light">
 
     <div id="wrapper" class="container-fluid quierofoto p-5">
-        <a href="#"><img src="./images/letrasylogo.png" alt="logo" class="w-25 d-block m-auto"></a>
+        <a href="./index.html"><img src="./images/letrasylogo.png" alt="logo" class="w-25 d-block m-auto"></a>
         <div class="row">
             <div class="col-xs-12 col-md-8 col-lg-6 m-auto bg-light">
                 
@@ -39,7 +39,7 @@
                     </div>
                     <!-- campo de tipo number - mínimo y máximo -->
                     <div class="mb-3">
-                        <label for="codpostal" class="form-label">Código Postal *:</label>
+                        <label for="codpostal" class="form-label">Código Postal:*</label>
                         <input type="number" min="29001" max="29999" class="form-control" id="codpostal" name="codpostal" aria-describedby="codpostalHelp" 
                         value="29006" required> 
                         <div id="codpostalHelp" class="form-text">Campo obligatorio</div>
@@ -47,7 +47,6 @@
                     
                     <div class="mb-3">
                         <label for="provincia" class="form-label">Provincia:*</label>
-                        <!-- para validar que verdaderamente se elije una de las opciones y no se envía sin más, se tendría que evaluar mediante javascript (lo veremos más adelante)-->
                         <select class="form-select" aria-label="Selecciona provincia" id="provincia" name="provincia">
                             <option>--Selecciona provincia</option>
                             <option value="malaga" selected>Málaga</option>

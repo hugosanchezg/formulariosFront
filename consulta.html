@@ -21,7 +21,7 @@
 <body class="bg-light">
   
   <div id="wrapper" class="container-fluid bg-light p-5">
-    <a href="#"><img src="./images/letrasylogo.png" alt="logo" class="w-25 d-block m-auto"></a>
+    <a href="./index.html"><img src="./images/letrasylogo.png" alt="logo" class="w-25 d-block m-auto"></a>
     <h1 class="titulo text-center py-3 text-primary">Listado de clientes</h1>
     
     <!--tabla-->
@@ -34,7 +34,7 @@
               <th scope="col">Apellidos</th>
               <th scope="col">CP</th>
               <th scope="col">Provincia</th>
-              <th scope="col">Comentario</th>
+              <th scope="col">Dirección</th>
               <th scope="col">VIP</th>
               <th scope="col">Editar</th>
               <th scope="col">Borrar</th>
@@ -48,11 +48,11 @@
               <td>Sánchez González</td>
               <td>29006</td>
               <td>Málaga</td>
-              <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque provident laboriosam voluptatum vel hic laborum excepturi sapiente assumenda qui nemo? Ab incidunt velit aperiam aspernatur. Ipsum doloribus omnis neque totam?</td>
+              <td>Calle Alfredo Palma, Residencial Bellavista, Bloque 6, 3ºD</td>
               <td>Si</td>
-              <!-- el icono del lápiz queda encuadrado en un vínculo en el que se abre la ventana de edición. Programado en JSP, enviaría con la URL los datos del cliente en particular que se edita para cargar los campos del formulario de edición -->
-              <td><a href="edicion.html" target="_blank"><i class="bi bi-pencil-square fs-3 text-success"></i></a></td>
-              <!-- el icono de la basura, dispara la aparición de una ventana de confirmación, con 2 botones: aceptar y cancelar. Según el que pulse, se cierra la ventana y se obtiene uno de dos valores: true y false. Si true, se sigue borrando, si false se aborta la operación -->
+              <!-- icono del lápiz para editar en verde -->
+              <td><a href="./edicion.html" target="_blank"><i class="bi bi-pencil-square fs-3 text-success"></i></a></td>
+              <!-- icono de la basura para eliminar en rojo -->
               <td><i class="bi bi-trash text-danger fs-3" onclick="confirm('Estás seguro de que quieres BORRAR este registro?')"></i></td>
             </tr>
             <tr>
@@ -61,31 +61,31 @@
               <td>Onetto</td>
               <td>29603</td>
               <td>Málaga</td>
-              <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque provident laboriosam voluptatum vel hic laborum excepturi sapiente assumenda qui nemo? Ab incidunt velit aperiam aspernatur. Ipsum doloribus omnis neque totam?</td>
+              <td></td>
               <td>No</td>
-              <td><a href="edicion.html" target="_blank"><i class="bi bi-pencil-square fs-3 text-success"></i></a></td>
+              <td><a href="./edicion.html" target="_blank"><i class="bi bi-pencil-square fs-3 text-success"></i></a></td>
               <td><i class="bi bi-trash text-danger fs-3" onclick="confirm('Estás seguro de que quieres BORRAR este registro?')"></i></td>
             </tr>
             <tr>
               <th scope="row">3</th>
               <td>Javier</td>
-              <td>Díaz</td>
+              <td>Díaz Soler</td>
               <td>04002</td>
               <td>Almería</td>
-              <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque provident laboriosam voluptatum vel hic laborum excepturi sapiente assumenda qui nemo? Ab incidunt velit aperiam aspernatur. Ipsum doloribus omnis neque totam?</td>
+              <td>Calle Daniel Defoe 1, Portal 1, Bloque 2, 3ºA</td>
               <td>Si</td>
-              <td><a href="edicion.html" target="_blank"><i class="bi bi-pencil-square fs-3 text-success"></i></a></td>
+              <td><a href="./edicion.html" target="_blank"><i class="bi bi-pencil-square fs-3 text-success"></i></a></td>
               <td><i class="bi bi-trash text-danger fs-3" onclick="confirm('Estás seguro de que quieres BORRAR este registro?')"></i></td>
             </tr>
           </tbody>
         </table>
       </div>
 
-      <!--botón para meter un nuevo integrante-->
+      <!--insertar cliente botón-->
       <button type="button" class="btn btn-primary" 
       data-bs-toggle="modal" data-bs-target="#formularioInsertar">Insertar cliente</button>
 
-      <!--MODAL DE INSERCIÓN DE DATOS-->
+      <!--modal para insertar los datos-->
       <div class="modal fade" id="formularioInsertar" tabindex="-1" aria-labelledby="formularioInsertar" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
@@ -96,26 +96,25 @@
             <div class="modal-body">
               <form method="post" action="" class="border border-primary p-4">
                 <h1 class="text-center py-3 text-primary">Inserción de datos</h1>
-                <!-- introducción de nombre con efecto placeholder -->
+                <!-- nombre -->
                 <div class="form-floating mb-3">
                     <input type="text" class="form-control" id="nombre" name="nombre" 
                     placeholder="Dame tu nombre" required>
                     <label for="nombreHelp" class="form-label">Nombre*</label>
                 </div>
-                <!-- introducción de apellidos con label y aclaración por debajo -->
+                <!-- apellidos -->
                 <div class="mb-3">
                     <label for="apellidos" class="form-label">Apellidos:*</label>
                     <input type="text" class="form-control" id="apellidos" name="apellidos" aria-describedby="apellidosHelp" required>
                 </div>
-                <!-- campo de tipo number con un mínimo y un máximo -->
+                <!-- cod postal -->
                 <div class="mb-3">
                     <label for="codpostal" class="form-label">Código Postal:*</label>
                     <input type="number" min="29001" max="29999" class="form-control" id="codpostal" name="codpostal" aria-describedby="codpostalHelp" required>
                 </div>
-                <!-- vamos a incluir un campo desplegable de opciones (select) -->
+                <!-- desplegable provincias -->
                 <div class="mb-3">
                     <label for="provincia" class="form-label">Provincia:*</label>
-                    <!-- para validar que verdaderamente se elije una de las opciones y no se envía sin más, se tendría que evaluar mediante javascript (lo veremos más adelante)-->
                     <select class="form-select" aria-label="Selecciona provincia" id="provincia" name="provincia">
                         <option>--Selecciona una provincia</option>
                         <option value="malaga">Málaga</option>
@@ -123,57 +122,58 @@
                         <option value="almeria">Almería</option>
                     </select>
                 </div>
-                <!-- campo de texto. No se suele validar -->
+                <!-- dirección, no se valida -->
                 <div class="mb-3">
-                    <label for="comentario">Comentario</label>
-                    <textarea class="form-control" placeholder="Deja aquí tu comentario" id="comentario" name="comentario"></textarea>
+                    <label for="comentario">Dirección</label>
+                    <textarea class="form-control" placeholder="Deja aquí la dirección (opcional)" id="comentario" name="comentario"></textarea>
                     
                   </div>
 
-                  <!-- campo booleano, casilla de verificación suele ir asociado con un dato verdadero/falso o con una aceptación de condiciones EN CUYO CASO, SE CONTROLARÍA LA OBLIGATORIEDAD DE MARCARLA DESDE JAVASCRIPT -->
-
+                  <!-- campo booleano si es VIP o no -->
                   <div class="mb-3 form-check">
                     <input type="checkbox" class="form-check-input" id="mayoredad" name="mayoredad">
                     <label class="form-check-label" for="mayoredad"> VIP </label>
                   </div>
                 <button type="submit" class="btn btn-primary">Enviar</button>
             </form>
-            </div><!-- body del modal-->
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              
-            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            
           </div>
         </div>
       </div>
-
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    
-    <footer class="piepagina">
-        
-      <div class="grupo1">
-          <div class="box">
-              <figure>
-                  <a href="#"><img src="./images/MASKEDLOGO.png" alt="logo" id="imagenFooter"></a>
-              </figure>
-          </div>
-          <div class="box">
-              <h2>DERECHOS Y LICENCIAS</h2>
-              <p><a target="_blank" href="https://copyright.es/" class="fa fa-copyright">2003-2021, MASKED, Inc. o sus filiales</a></p>
-              <div class="redsocial">
-                  <p><a target="_blank" href="https://copyright.es/"> Licencia de Compra-venta</a></p>
-                  <p><a target="_blank" href="https://copyright.es/"> Licencia de Envíos</a></p>
-              </div>
-          </div>
-          <div class="box">
-              <h2>SOBRE NOSOTROS</h2>
-              <p><a href ="mailto:masked@gmail.com">📧Correo de contacto</a></p>
-              <p><a href="tel:+34722639496">📞Teléfono de contacto</a></p>
-              <p><a href="https://github.com/hugosanchezg?tab=repositories"> Instagram</a></p>
 
-          </div>
-      </div>
-    </footer>
+  </div><!--fin del container-->
+  
+  <!--enlace a javascript-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  
+  <!--footer-->
+  <footer class="piepagina">
+      
+    <div class="grupo1">
+        <div class="box">
+            <figure>
+                <a href="#"><img src="./images/MASKEDLOGO.png" alt="logo" id="imagenFooter"></a>
+            </figure>
+        </div>
+        <div class="box">
+            <h2>DERECHOS Y LICENCIAS</h2>
+            <p><a target="_blank" href="https://copyright.es/" class="fa fa-copyright">2003-2021, MASKED, Inc. o sus filiales</a></p>
+            <div class="redsocial">
+                <p><a target="_blank" href="https://copyright.es/"> Licencia de Compra-venta</a></p>
+                <p><a target="_blank" href="https://copyright.es/"> Licencia de Envíos</a></p>
+            </div>
+        </div>
+        <div class="box">
+            <h2>SOBRE NOSOTROS</h2>
+            <p><a href ="mailto:masked@gmail.com">📧Correo de contacto</a></p>
+            <p><a href="tel:+34722639496">📞Teléfono de contacto</a></p>
+            <p><a href="https://github.com/hugosanchezg?tab=repositories"> Instagram</a></p>
+        </div>
+    </div>
+  </footer>
 </body>
 </html>
