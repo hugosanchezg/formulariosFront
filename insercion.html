@@ -30,26 +30,26 @@
                     <h1 class="titulo text-center py-3 text-light">Registre sus datos</h1>
                     <!-- nombre -->
                     <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="nombre" name="nombre" 
+                        <input type="text" class="shadow form-control" id="nombre" name="nombre" 
                         placeholder="Dame tu nombre" required>
                         <label for="nombreHelp" class="form-label">Nombre *</label>
                     </div>
                     <!-- apellidos -->
                     <div class="mb-3">
                         <label for="apellidos" class="form-label">Apellidos *:</label>
-                        <input type="text" class="form-control" id="apellidos" name="apellidos" aria-describedby="apellidosHelp" required>
+                        <input type="text" class="shadow form-control" id="apellidos" name="apellidos" aria-describedby="apellidosHelp" required>
                         <div id="apellidosHelp" class="form-text">Campo obligatorio</div>
                     </div>
                     <!-- cod postal -->
                     <div class="mb-3">
                         <label for="codpostal" class="form-label">Código Postal *:</label>
-                        <input type="number" min="29001" max="29999" class="form-control" id="codpostal" name="codpostal" aria-describedby="codpostalHelp" required> 
+                        <input type="number" min="29001" max="29999" class="shadow form-control" id="codpostal" name="codpostal" aria-describedby="codpostalHelp" required> 
                         <div id="codpostalHelp" class="form-text">Campo obligatorio</div>
                     </div>
                     <!-- provincias desplegable -->
                     <div class="mb-3">
                         <label for="provincia" class="form-label">Provincia *:</label>
-                        <select class="form-select" aria-label="Selecciona provincia"
+                        <select class="form-select shadow" aria-label="Selecciona provincia"
                         id="provincia" name="provincia">
                             <option>--Selecciona provincia</option>
                             <option value="malaga">Málaga</option>
@@ -60,7 +60,7 @@
                     <!-- campo de texto. No se suele validar -->
                     <div class="mb-3">
                         <label for="comentario">Dirección</label>
-                        <textarea class="form-control" placeholder="Deja aquí la dirección (opcional)" id="comentario" name="comentario"></textarea>
+                        <textarea class="form-control shadow" placeholder="Deja aquí la dirección (opcional)" id="comentario" name="comentario"></textarea>
                         
                     </div>
 
@@ -69,7 +69,7 @@
                         <input type="checkbox" class="form-check-input" id="mayoredad" name="mayoredad">
                         <label class="form-check-label" for="mayoredad">VIP</label>
                     </div>
-                    <button type="submit" class="btn btn-primary">Enviar</button>
+                    <button type="submit" class="btn btn-primary shadow">Enviar</button>
                 </form>
             </div>
         </div>
