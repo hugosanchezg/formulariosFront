@@ -22,6 +22,10 @@ textarea {height:200px !important;}
     background-image: url(../images/foto1.PNG);
 }
 
+.quierofoto2{
+    background-image: url(../images/foto3.jpg);
+}
+
 /*FOOTER*/
 .piepagina{
     background-color: #fff;
